@@ -222,7 +222,7 @@ void Postprocess_And_Draw(void)
     const int num_classes = AI_NETWORK_OUT_1_CHANNEL; // Should be 3
 
     // We'll work directly with integer scores. A score above 50 is a confident detection.
-    const int8_t confidence_threshold = 50;
+    const int8_t confidence_threshold = 74;
 
     int8_t* out_ptr = (int8_t*)ai_output_buffer;
 
@@ -486,7 +486,7 @@ int main(void)
 	          sprintf((char *)&text,"%luFPS",Camera_FPS);
 	          LCD_ShowString(5,5,60,16,12,text);
 
-	          board_led_toggle();
+	          //board_led_toggle();
 	      }
   }
   /* USER CODE END 3 */
