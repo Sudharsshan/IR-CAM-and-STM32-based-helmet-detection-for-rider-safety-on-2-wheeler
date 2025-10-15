@@ -1,0 +1,11 @@
+../Bsp/Camera/ov7670.c:4:5:OV7670_WriteReg	32	static
+../Bsp/Camera/ov7670.c:19:5:OV7670_ReadReg	24	static
+../Bsp/Camera/ov7670.c:32:5:OV7670_Reset	16	static
+../Bsp/Camera/ov7670.c:44:5:OV7670_WriteRegList	24	static
+../Bsp/Camera/ov7670.c:67:6:OV7670_Light_Mode	24	static
+../Bsp/Camera/ov7670.c:106:6:OV7670_Color_Saturation	24	static
+../Bsp/Camera/ov7670.c:150:6:OV7670_Brightness	24	static
+../Bsp/Camera/ov7670.c:177:6:OV7670_Contrast	24	static
+../Bsp/Camera/ov7670.c:206:6:OV7670_Special_Effects	24	static
+../Bsp/Camera/ov7670.c:251:6:ov7670_Window_Set	32	static
+../Bsp/Camera/ov7670.c:279:5:OV7670_Config	24	static

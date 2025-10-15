@@ -1,0 +1,8 @@
+../Bsp/Camera/camera.c:50:9:Camera_WriteReg	2
+../Bsp/Camera/camera.c:65:9:Camera_ReadReg	2
+../Bsp/Camera/camera.c:78:9:Camera_WriteRegb2	2
+../Bsp/Camera/camera.c:91:9:Camera_ReadRegb2	2
+../Bsp/Camera/camera.c:104:9:Camera_WriteRegList	4
+../Bsp/Camera/camera.c:119:9:Camera_read_id	2
+../Bsp/Camera/camera.c:144:6:Camera_Reset	1
+../Bsp/Camera/camera.c:154:6:Camera_Init_Device	8
