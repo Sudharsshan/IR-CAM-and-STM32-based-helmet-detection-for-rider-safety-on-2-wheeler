@@ -222,7 +222,7 @@ void Postprocess_And_Draw(void)
     const int num_classes = AI_NETWORK_OUT_1_CHANNEL; // Should be 3
 
     // We'll work directly with integer scores. A score above 50 is a confident detection.
-    const int8_t confidence_threshold = 74;
+    const int8_t confidence_threshold = 115;
 
     int8_t* out_ptr = (int8_t*)ai_output_buffer;
 
@@ -255,7 +255,7 @@ void Postprocess_And_Draw(void)
                 int y1 = y * box_size;
 
                 // If we found "With Helmet" (index 0)
-                if (winning_class_index == 0) {
+                if (winning_class_index == 1) {
                     helmet_found = true;
                     ST7735_LCD_Driver.FillRect(&st7735_pObj, x1, y1, box_size, box_size, GREEN);
                 }
@@ -272,11 +272,11 @@ void Postprocess_And_Draw(void)
     }
 
     // --- Control the kill switch based on our findings ---
-    if (helmet_found) {
-        HAL_GPIO_WritePin(BIKE_KILL_SWITCH_GPIO_Port, BIKE_KILL_SWITCH_Pin, GPIO_PIN_RESET);
-    } else {
-        HAL_GPIO_WritePin(BIKE_KILL_SWITCH_GPIO_Port, BIKE_KILL_SWITCH_Pin, GPIO_PIN_SET);
-    }
+//    if (helmet_found) {
+//        HAL_GPIO_WritePin(BIKE_KILL_SWITCH_GPIO_Port, BIKE_KILL_SWITCH_Pin, GPIO_PIN_RESET);
+//    } else {
+//        HAL_GPIO_WritePin(BIKE_KILL_SWITCH_GPIO_Port, BIKE_KILL_SWITCH_Pin, GPIO_PIN_SET);
+//    }
 }
 /* USER CODE END 0 */
 
@@ -407,7 +407,7 @@ int main(void)
 	          // --- FOMO Post-Processing Logic ---
 	              // The output is a grid. These values come directly from your network.h!
 	          bool helmet_found = false;
-	          const int8_t confidence_threshold = 70;
+	          const int8_t confidence_threshold = 115;
 	          const int grid_w = AI_NETWORK_OUT_1_WIDTH;    // Should be 12
 	          const int grid_h = AI_NETWORK_OUT_1_HEIGHT;   // Should be 12
 	          const int num_classes = AI_NETWORK_OUT_1_CHANNEL; // Should be 3
@@ -463,7 +463,7 @@ int main(void)
 	          		else if (helmet_on_timestamp > 0)
 	          		{
 	          			// No helmet was found, but the timer is active. Check if 10s have passed.
-	          			if (HAL_GetTick() - helmet_on_timestamp > 5000) // Every 5 seconds
+	          			if (HAL_GetTick() - helmet_on_timestamp > 10000) // Every 5 seconds
 	          			{
 	          				// 10 seconds are up! Turn the pin LOW and stop the timer.
 	          				HAL_GPIO_WritePin(BIKE_KILL_SWITCH_GPIO_Port, BIKE_KILL_SWITCH_Pin, GPIO_PIN_SET);
@@ -475,7 +475,7 @@ int main(void)
 	          			else
 	          			{
 	          				// Timer is still running, so keep the message on screen
-	          				sprintf((char *)text_buffer,"Helmet Detected");
+	          				sprintf((char *)text_buffer,"Has Helmet Detected..");
 	          				LCD_ShowString(70, 65, 90, 12, 12, text_buffer);
 	          			}
 	          		}

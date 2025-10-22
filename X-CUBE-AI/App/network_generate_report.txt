@@ -1,6 +1,6 @@
 ST Edge AI Core v2.1.0-20194 329b0e98d
-Created date          : 2025-09-15 00:18:49
-Parameters            : generate --target stm32h7 --name network -m C:/Users/sudha/Downloads/ryujin-project-1-cpp-mcu-v4/tflite-model/tflite_learn_779780_11.tflite --compression none --verbosity 1 --workspace C:/Users/sudha/AppData/Local/Temp/mxAI_workspace1102930017122002165611431983087916 --output C:/Users/sudha/.stm32cubemx/network_output
+Created date          : 2025-10-15 11:34:07
+Parameters            : generate --target stm32h7 --name network -m C:/Users/sudha/Downloads/ryujin-project-1-cpp-mcu-v4/tflite-model/tflite_learn_779780_11.tflite --compression none --verbosity 1 --workspace C:/Users/sudha/AppData/Local/Temp/mxAI_workspace6974841809001093341829300649630 --output C:/Users/sudha/.stm32cubemx/network_output
 
 Exec/report summary (generate)
 --------------------------------------------------------------------------------------------------------------------------
@@ -11,7 +11,7 @@ compression        :   none
 options            :   allocate-inputs, allocate-outputs                                                                  
 optimization       :   balanced                                                                                           
 target/series      :   stm32h7                                                                                            
-workspace dir      :   C:\Users\sudha\AppData\Local\Temp\mxAI_workspace1102930017122002165611431983087916                 
+workspace dir      :   C:\Users\sudha\AppData\Local\Temp\mxAI_workspace6974841809001093341829300649630                    
 output dir         :   C:\Users\sudha\.stm32cubemx\network_output                                                         
 model_fmt          :   ss/sa per channel                                                                                  
 model_name         :   tflite_learn_779780_11                                                                             
