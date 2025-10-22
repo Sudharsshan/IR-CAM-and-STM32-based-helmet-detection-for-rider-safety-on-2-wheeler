@@ -7,9 +7,6 @@
 
 An intelligent, on-device system designed to enforce helmet use and enhance road safety for two-wheeler riders. This project was developed as a final-year B.Tech project in Electrical and Electronics Engineering at CHRIST (Deemed to be University), Bengaluru.
 
-![Graphical Abstract of the system](https://i.imgur.com/G5g2mJc.png)
-*Figure: High-level system architecture showing the Detection and Control units.*
-
 ## 📖 Introduction
 
 [cite_start]Motorcycle fatalities are strongly correlated with the non-usage of helmets[cite: 649]. [cite_start]This project presents an embedded, on-device Machine Learning system that detects helmet usage and enforces a safety interlock on the motorcycle's ignition circuit[cite: 651].
