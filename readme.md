@@ -26,9 +26,6 @@ An intelligent, on-device system designed to enforce helmet use and enhance road
 
 The project followed a structured development methodology, from initial requirements to final validation.
 
-![System Workflow Diagram](https://i.imgur.com/60E0W9T.png)
-*Figure: The end-to-end workflow used in the project's development.*
-
 ## 🛠️ Hardware & Software
 
 ### Hardware Components
