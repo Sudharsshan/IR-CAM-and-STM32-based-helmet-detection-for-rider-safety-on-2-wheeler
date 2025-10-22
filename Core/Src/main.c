@@ -255,7 +255,7 @@ void Postprocess_And_Draw(void)
                 int y1 = y * box_size;
 
                 // If we found "With Helmet" (index 0)
-                if (winning_class_index == 1) {
+                if (winning_class_index == 0) {
                     helmet_found = true;
                     ST7735_LCD_Driver.FillRect(&st7735_pObj, x1, y1, box_size, box_size, GREEN);
                 }
